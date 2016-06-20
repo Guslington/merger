@@ -49,12 +49,14 @@ while :
 do
   git status
   echo -e "${RED}Would you like to merge the file(s) above?${NC}"
-  read -p "[Y]es | [N]o: " choice
+  read -p "[Y]es | [N]o | [D]iff: " choice
   case "$choice" in
     y|Y ) echo -e "${GREEN}Adding and commiting the files...${NC}"
           break;;
     n|N ) echo -e "${RED}Exiting without changes...${NC}"
           exit 0;;
+    d|D ) echo -e "${GREEN}Showing diff...${NC}"
+          git diff-index -p HEAD;;
     * ) echo -e "${RED}invalid...${NC}";;
   esac
 done
