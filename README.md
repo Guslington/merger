@@ -18,9 +18,22 @@ Open ~/.bashrc for bash or ~/.zshrc for zsh
 alias merger="~/bin/merger.sh"
 ```
 
+###Setup creds
+Setup credentials for hub and ghi
+
+####hub
+run a command to prompt for authentication
+####ghi
+```sh
+ghi config --auth <username>
+```
+
 ### How to use
 ```sh
 merger 'comment'
+
+Would you like to merge the file(s) above?
+[Y]es | [N]o | [D]iff:
 
 What would you like to do?
 [M]erge | [R]etest | [F]ix | [C]lose | [O]pen in browser:
